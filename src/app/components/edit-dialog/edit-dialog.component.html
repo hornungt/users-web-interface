@@ -1,0 +1,18 @@
+<form (ngSubmit)="confirm()" #userForm="ngForm">
+
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" required [(ngModel)]="model.name" name="name">
+        {{ data.user.name }}
+    </div>
+
+    <div class="form-group">
+        <label for="age">Age</label>
+        <input type="number" class="form-control" id="age" required [(ngModel)]="model.age" name="age">
+    </div>
+
+    <button type="button" (click)="cancel()" class="btn">CANCEL</button>
+    <button type="submit" class="btn btn-success" [disabled]="!userForm.form.valid" style="float: right">OK</button>
+    
+
+</form>

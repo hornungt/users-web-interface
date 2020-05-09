@@ -1,0 +1,12 @@
+<div class="container">
+    <div style="text-align: center">
+        <button mat-raised-button (click)="getUsers()" style="margin-right: 2.5vw">Get Users</button>
+        <button mat-raised-button (click)="addUser()">Add User</button>
+        <h3>Users:</h3>
+    </div>
+
+    
+    <div class="userCard" *ngFor="let user of users">
+        <app-user-info [userData]="user" (delete)="deleteUser(user)" (edit)="editUser($event)"></app-user-info>
+    </div>
+</div>

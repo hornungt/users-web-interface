@@ -1,0 +1,20 @@
+<form (ngSubmit)="onSubmit()" #userForm="ngForm">
+
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" required [(ngModel)]="model.name" name="name">
+    </div>
+
+    <div class="form-group">
+        <label for="idNum">ID no.</label>
+        <input type="number" class="form-control" id="idNum" required [(ngModel)]="model.idNum" name="idNum">
+    </div>
+
+    <div class="form-group">
+        <label for="age">Age</label>
+        <input type="number" class="form-control" id="age" required [(ngModel)]="model.age" name="age">
+    </div>
+
+    <button type="submit" class="btn btn-success" [disabled]="!userForm.form.valid">Add user</button>
+
+</form>

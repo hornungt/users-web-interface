@@ -1,0 +1,15 @@
+<div class="container">
+
+    <mat-card>
+        <mat-card-title>{{ userData.name }}</mat-card-title>
+        <mat-card-content>
+            <ul>
+                <li>ID: {{ userData.idNum }}</li>
+                <li>Age: {{ userData.age }}</li>
+            </ul>
+        </mat-card-content>
+        <button mat-raised-button (click)="openEditDialog()">Edit</button>
+        <button mat-raised-button color="warn" (click)="confirmDelete()">Delete</button>
+    </mat-card>
+
+</div>
